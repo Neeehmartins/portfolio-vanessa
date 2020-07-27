@@ -1,0 +1,100 @@
+@media (max-width: 900px) {
+    banner{
+       background-position: 70vw;
+    }
+
+    banner-conteudo {
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+
+.redes-sociais .grid {
+    display: grid;
+    gap: 2em;
+    text-align: center;
+    
+  }
+  
+  @media (min-width: 560px) {
+    .redes-sociais .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .redes-sociais .grid {
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+  .redes-sociais .grid {
+    display: grid;
+    gap: 2em;
+    text-align: center;
+    
+  }
+  
+  @media (min-width: 560px) {
+    .redes-sociais .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .redes-sociais .grid {
+      grid-template-columns: repeat(4, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+
+
+  
+  @media (min-width: 560px) {
+    .sobre-conteudo {
+      grid-template-columns: 300px 300px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .sobre-conteudo{
+      grid-template-columns: repeat(4, 240px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+
+  @media (min-width: 560px) {
+    .sobre-minhas-habilidades {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .sobre-minhas-habilidades{
+      grid-template-columns: repeat(4, 300px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+  @media (min-width: 560px) {
+    .footer {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .footer {
+      grid-template-columns: repeat(4, 300px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }

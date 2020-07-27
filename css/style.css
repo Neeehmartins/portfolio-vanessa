@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+}
+
+a:link {
+  text-decoration: none;
+}
+/* HEADER */
+
+.banner {
+  background-image: url("/img/banner-bg.png");
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+}
+
+/* Display Flex: Retira o padrão block dos elementos 
+     Margin Auto: Deixa o elemento centralizado na página
+  
+  */
+
+.banner-conteudo {
+  margin: auto;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-conteudo a {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.banner-conteudo a:hover {
+  background-color: #747edb;
+  transition: ease 0.5s;
+  color: #fff;
+}
+
+/* SOBRE MIM */
+
+.sobre,
+.redes-sociais {
+  /* margin: 0 10rem; */
+  max-width: 1024px;
+  margin: auto;
+}
+
+.sobre > h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.sobre-mim {
+  display: flex;
+}
+
+.sobre-conteudo,
+.sobre-habilidades {
+  width: 50%;
+}
+
+.sobre-conteudo {
+  margin-right: 5rem;
+}
+
+.sobre-conteudo a {
+  background-color: #747edb;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+}
+
+.sobre-conteudo a:hover {
+  background-color: #fff;
+  color: #747edb;
+  border: 1px solid #747edb;
+  transition: ease 0.2s;
+}
+
+/* REDES SOCIAIS */
+
+
+.redes-sociais {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.redes-sociais_facebook,
+.redes-sociais_linkedin,
+.redes-sociais_twitter,
+.redes-sociais_github {
+  background-color: #747edb;
+  color: #fff;
+  text-align: center;
+  padding: 2rem; 
+  height: 180px;
+  width: 200px;
+  object-fit: cover;
+  object-position: bottom;
+  transition: 500ms;
+  transform: scale(1);
+  border-radius: 3px;
+  cursor: pointer; 
+}
+
+.redes-sociais img {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+
+
+/* FOOTER */
+
+footer {
+  background-color: #747edb;
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 0;
+}
