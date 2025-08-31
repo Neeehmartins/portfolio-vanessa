@@ -4,94 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Página da Vanessa</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
+   <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Ubuntu&display=swap" rel="stylesheet"><body>
-    <body>
-        <!-- ÍNICIO HEADER -->
-        <header class="banner">
-          <div class="banner-conteudo">
-            <h1>Hello, eu sou a Vanessa!</h1>
-            <h2>Conheça mais sobre mim</h2>
-            <a href="#sobre">Veja mais sobre mim</a>
-          </div>
-        </header>
-        <!-- FIM DO HEADER -->
+
+ <body>
+  <!-- Imagem de fundo extra -->
+  <img src="img/cubos.png" alt="Imagem Extra" class="imagem-fundo-banner">
+  
+  <!-- ÍNICIO HEADER -->
+  <header class="banner" id="topo">
+    <div class="banner-conteudo">
+      <img src="img/Van.PNG" alt="Vanessa" class="banner-img">
+      <div class="banner-texto">
+        <h3 class="titulo-preto"><b>OLÁ! EU SOU A VANESSA</b></h3>
+        <h3 class="texto-laranja mina-font">ANL DE DADOS E NEGÓCIOS</h3>
+        <a href="#sobre" class="botao-laranja">Veja mais</a>
+      </div>
+    </div>
+  </header>
+  <!-- FIM DO HEADER -->
+
+  <!-- Suas seções devem ficar aqui, dentro do body -->
+<section id="sobre" class="sobre" style="display: none;">
+  <div class="sobre-conteudo-bg">
+    <h2>Sobre mim</h2>
+    <p>Eu me chamo <b>Vanessa Martins</b>, adoro música e sou fascinada por tecnologia!</p>
+    <p>Tenho 30 anos, sou formada em Marketing e estou iniciando minha carreira na área de Desenvolvimento de Software desde o final de 2019.</p>
+  </div>
+</section>
+
+  <section id="projetos" class="projetos"style="display: none;">
+    <ul>
+      <li>Projeto 1: Descrição breve do projeto.</li>
+      <li>Projeto 2: Descrição breve do projeto.</li>
+      <!-- Adicione mais projetos aqui -->
+    </ul>
+  </section>
+
+<footer id="footer" style="display: none;">
+  <p>Feito por | © Vanessa Martins</p>
+</footer>
+
+<script>
+  const botao = document.querySelector('.botao-laranja');
+  const sobre = document.getElementById('sobre');
+  const footer = document.getElementById('footer');
+
+  botao.addEventListener('click', function(e) {
+    e.preventDefault();
+    sobre.style.display = 'block';
+    footer.style.display = 'block';
+    sobre.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
     
-        <!-- INÍCIO SOBRE MIM -->
-        <section id="sobre" class="sobre">
-          <h3>Um pouco mais sobre mim </h3>
-    
-          <div class="sobre-mim">
-    
-            <div class="sobre-conteudo">
-              <p>Eu me chamo <b>Vanessa Martins</b>, adoro música e sou fascinada por tecnologia!</p>
-              <p>Tenho 25 anos, sou formada em Marketing e estou iniciando minha carreira na área 
-                de Desenvolvimento de Software desde o final de 2019.
-                <p>Gosto muito de tudo que tem relação com concepção visual, e por adorar mexer com interfaces o meu foco é em <b>Front-end</b>.</p>
-                <p>Acredito que estas duas áreas (desenvolvimento de software/marketing me ajudaram a ter um olhar 360 sobre um negócio, projeto ou ideia. 
-                  </p>
-              </p>
-              <a href="img/Vanessa Martins - CV.pdf" target="_blank">Veja meu CV</a>
-            </div>
-    
-            <div class="sobre-habilidades">
-              <h3>Minhas habilidades</h3>
-              <ul>
-                <li>Criatividade;</li>
-                <li>Resolução de problemas;</li>
-                <li>Adaptabilidade;</li>
-                <li>Liderança</li>
-              </ul>
-            </div>
-    
-          </div>
-    
-        </section>
-      
-      
-        <section class="redes">
-          <div class="redes-sociais">
-            <div class="redes-sociais_facebook">
-              <a href="https://www.facebook.com/vanessa.martins.94009" target="_blank">
-              <img src="/img/facebook.png" alt="Ícone do Facebook">
-              <p>Facebook</p>
-              </a>
-            </div>
-    
-            <div class="redes-sociais_linkedin">
-              <a href="https://www.linkedin.com/in/vanessamartins23" target="_blank">
-              <img src="/img/in.png" alt="Ícone do Linkedin">
-              <p>Linkedin</p>
-              </a>
-            </div>
-    
-            <div class="redes-sociais_twitter">
-              <a href="https://twitter.com/Neeh_martins" target="_blank">
-              <img src="/img/twitter.png" alt="Ícone do Twitter">
-              <p>Twitter</p>
-              </a>
-            </div>
-    
-            <div class="redes-sociais_github">
-              <a href="https://github.com/Neeehmartins" target="_blank">
-              <img src="/img/github.png" alt="Ícone do Github">
-              <p>Github</p>
-              </a>
-            </div>       
-    
-          </div>
-        </section>
-    
-        <!-- FIM DAS REDES SOCIAIS -->
-    
-        <!-- Footer -->
-        <footer>
-          <p>Feito por | © Vanessa Martins  </p>
-        </footer>
-      </body>
-    
+ 
     </html>

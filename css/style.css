@@ -3,9 +3,7 @@
 }
 
 body {
-  margin: 0;
-  font-family: "Dosis", sans-serif;
-  font-size: 20px;
+  font-family: 'Pragati Narrow', sans-serif;
 }
 
 a:link {
@@ -13,46 +11,98 @@ a:link {
 }
 /* HEADER */
 
+
+.imagem-fundo-banner {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100vw;
+  height: 600px; /* altura do header */
+  object-fit: cover;
+  z-index: 0;
+}
 .banner {
-  background-image: url("/img/banner-bg.png");
-  background-size: cover;
-  height: 90vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* .banner {
+  position: relative;
+  top: 100px;
+  background-image: url('../img/cubos.png'), url('../img/banner.jpg');
+  background-size: cover, 400px auto;
+  background-position: center, right center;
+  background-repeat: no-repeat, no-repeat;
+  height: 600px; /* Ajuste conforme necessário */
+  /* display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  z-index: 1;
+} */ */
+
+/* .banner-conteudo {
   display: flex;
+  top: 100px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: 100%;
+  width: 100%;
+} */
+/* 
+.banner-img {
+  width: 600px;         /* Tamanho fixo maior */
+  /* max-width: 100%;      /* Garante que não ultrapasse o container */
+  /* height: 1200px;        /* Altura maior */
+  /* max-height: 100%;     Não ultrapassa o banner */
+  /* border-radius: 30px; */
+  /* object-fit: cover;
+  object-position: top; */
+/* } */ */ */ */
+
+/* Mobile: mantém imagem à esquerda e texto à direita */
+@media (max-width: 768px) {
+  .banner-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .banner-img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
 }
 
-/* Display Flex: Retira o padrão block dos elementos 
-     Margin Auto: Deixa o elemento centralizado na página
-  
-  */
-
-.banner-conteudo {
-  margin: auto;
-  font-family: "Ubuntu", sans-serif;
+.banner-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   text-align: center;
-  color: #fff;
+  flex: 1;
 }
 
-.banner-conteudo a {
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+.banner-texto h3 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
 }
 
-.banner-conteudo a:hover {
-  background-color: #747edb;
-  transition: ease 0.5s;
-  color: #fff;
+.banner-texto h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
 }
 
+.banner-texto a {
+  margin-top: 1rem;
+}
 /* SOBRE MIM */
 
-.sobre,
-.redes-sociais {
-  /* margin: 0 10rem; */
-  max-width: 1024px;
-  margin: auto;
+.sobre {
+  margin-top: 0; /* Se necessário, ajuste para evitar sobreposição */
+  /* Se o banner estiver muito alto, aumente aqui */
+  padding-top: 2rem;
 }
 
 .sobre > h3 {
@@ -87,45 +137,79 @@ a:link {
   transition: ease 0.2s;
 }
 
-/* REDES SOCIAIS */
-
-
-.redes-sociais {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  display: flex;
-  justify-content: space-between;
+.texto-laranja {
+  color: #FF6026;
+}
+.titulo-preto {
+  color: #000;
+  font-weight: bold;
 }
 
-.redes-sociais_facebook,
-.redes-sociais_linkedin,
-.redes-sociais_twitter,
-.redes-sociais_github {
-  background-color: #747edb;
+.mina-font {
+  font-family: 'Mina', sans-serif;
+}
+
+.banner-texto h3.titulo-preto {
+  font-size: 3.5rem;
+  margin: 0.2rem 0; /* Espaçamento menor */
+}
+
+.banner-texto h3.texto-laranja {
+  font-size: 2.5rem;
+  margin: 0.2rem 0; /* Espaçamento menor */
+}
+
+.banner-texto h2 {
+  font-size: 2rem;
+  margin: 0.2rem 0; /* Espaçamento menor */
+}
+
+.botao-laranja {
+  background-color: #FF6026;
   color: #fff;
-  text-align: center;
-  padding: 2rem; 
-  height: 180px;
-  width: 200px;
-  object-fit: cover;
-  object-position: bottom;
-  transition: 500ms;
-  transform: scale(1);
-  border-radius: 3px;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
 }
 
-.redes-sociais img {
-  max-width: 2rem;
-  max-height: 2rem;
+.botao-laranja:hover {
+  background-color: #e04e13;
 }
 
+.sobre {
+  position: relative;
+  background-image: url("data:image/svg+xml;utf8,<svg width='1440' height='900' viewBox='0 0 1440 900' xmlns='http://www.w3.org/2000/svg'><path fill='%23FF6026' fill-opacity='1' d='M0,400L60,420C120,440,240,480,360,500C480,520,600,520,720,500C840,480,960,440,1080,410C1200,380,1320,370,1380,366L1440,360L1440,900L1380,900C1320,900,1200,900,1080,900C960,900,840,900,720,900C600,900,480,900,360,900C240,900,120,900,60,900L0,900Z'></path></svg>");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -200px; /* Sobe o fundo das ondas */
+  min-height: 50vh;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  border-radius: 0;
+  z-index: 1;
+}
 
-
+.sobre-conteudo-bg {
+  /* background: url("data:image/svg+xml;utf8,<svg width='700' height='120' viewBox='0 0 700 120' xmlns='http://www.w3.org/2000/svg'><path fill='%23444' fill-opacity='1' d='M0,40 Q175,80 350,40 T700,40 V120 H0 Z'/></svg>") repeat-x; */
+  background-color:#FF6026; 
+  color: #fff;
+  padding: 2rem 2rem 4rem 2rem; /* Espaço extra embaixo para as ondas */
+  max-width: 700px;
+  margin: auto;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
 /* FOOTER */
 
 footer {
-  background-color: #747edb;
+  background-color: #FF6026;
   color: #fff;
   text-align: center;
   padding: 0.6rem 0;
