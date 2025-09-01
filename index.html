@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Página da Vanessa</title>
+    <title>Vanessa Martins | Data Analyst</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="img/tecnologia.png">
    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,27 +18,32 @@
   
   <!-- ÍNICIO HEADER -->
   <header class="banner" id="topo">
-    <div class="banner-conteudo">
-      <img src="img/Van.PNG" alt="Vanessa" class="banner-img">
+    <!-- <a href="#projetos" class="botao-laranja">Veja mais</a> -->
       <div class="banner-texto">
+        <a href="#sobre" class="botao-laranja">Veja mais</a>
         <h3 class="titulo-preto"><b>OLÁ! EU SOU A VANESSA</b></h3>
         <h3 class="texto-laranja mina-font">ANL DE DADOS E NEGÓCIOS</h3>
-        <a href="#sobre" class="botao-laranja">Veja mais</a>
       </div>
     </div>
   </header>
   <!-- FIM DO HEADER -->
 
   <!-- Suas seções devem ficar aqui, dentro do body -->
-<section id="sobre" class="sobre" style="display: none;">
+<section id="sobre" class="sobre">
   <div class="sobre-conteudo-bg">
-    <h2>Sobre mim</h2>
-    <p>Eu me chamo <b>Vanessa Martins</b>, adoro música e sou fascinada por tecnologia!</p>
-    <p>Tenho 30 anos, sou formada em Marketing e estou iniciando minha carreira na área de Desenvolvimento de Software desde o final de 2019.</p>
+    <div class="conteudo">
+      <img src="img/Van.PNG" alt="Foto de Vanessa Martins">
+      <div class="texto">
+        <h1>Sobre mim</h1>
+         <div class="texto_completo">
+        <p>Eu me chamo <b>Vanessa Martins</b>, adoro música e sou fascinada por tecnologia!</p>
+        <p>Tenho 30 anos, sou formada em Marketing e estou iniciando minha carreira na área de Desenvolvimento de Software desde o final de 2019.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-  <section id="projetos" class="projetos"style="display: none;">
+  <section id="projetos" class="projetos">
     <ul>
       <li>Projeto 1: Descrição breve do projeto.</li>
       <li>Projeto 2: Descrição breve do projeto.</li>
@@ -45,19 +51,19 @@
     </ul>
   </section>
 
-<footer id="footer" style="display: none;">
-  <p>Feito por | © Vanessa Martins</p>
+<!-- <footer id="footer" style="display: none;"> -->
+  <!-- <p>Feito por | © Vanessa Martins</p> -->
 </footer>
 
 <script>
   const botao = document.querySelector('.botao-laranja');
   const sobre = document.getElementById('sobre');
-  const footer = document.getElementById('footer');
+  // const footer = document.getElementById('footer');
 
   botao.addEventListener('click', function(e) {
     e.preventDefault();
     sobre.style.display = 'block';
-    footer.style.display = 'block';
+    // footer.style.display = 'block';
     sobre.scrollIntoView({ behavior: 'smooth' });
   });
 </script>
